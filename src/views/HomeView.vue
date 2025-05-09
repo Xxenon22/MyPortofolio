@@ -1,5 +1,5 @@
 <script setup>
-import Background from "../components/Background.vue";
+import Background from "../background.vue";
 import AboutMeView from "./AboutMeView.vue";
 import SkillView from "./SkillView.vue";
 import PortofolioView from "./PortofolioView.vue";
