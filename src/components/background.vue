@@ -1,37 +1,5 @@
-<template>
-  <div class="absolute inset-0 -z-10 bg-white overflow-hidden">
-    <!-- Lingkaran abu-abu -->
-    <div
-      v-for="(circle, index) in circles"
-      :key="'circle-' + index"
-      class="absolute bg-gray-300 rounded-full opacity-50"
-      :style="{
-        width: circle.size + 'px',
-        height: circle.size + 'px',
-        top: circle.top + '%',
-        left: circle.left + '%',
-      }"
-    ></div>
-
-    <!-- Garis melingkar kuning -->
-    <div
-      v-for="(ring, index) in rings"
-      :key="'ring-' + index"
-      class="absolute border-yellow-400 border-2 rounded-full opacity-40"
-      :style="{
-        width: ring.size + 'px',
-        height: ring.size + 'px',
-        top: ring.top + '%',
-        left: ring.left + '%',
-        transform: 'rotate(' + ring.rotate + 'deg)',
-      }"
-    ></div>
-  </div>
-</template>
-
 <script>
 export default {
-  name: "Background",
   data() {
     return {
       circles: [],
@@ -66,6 +34,33 @@ export default {
 };
 </script>
 
-<style scoped>
-/* Optional: efek animasi atau blur untuk kesan artistik */
-</style>
+<template>
+  <div class="absolute inset-0 -z-10 bg-white overflow-hidden">
+    <!-- Lingkaran abu-abu -->
+    <div
+      v-for="(circle, index) in circles"
+      :key="'circle-' + index"
+      class="absolute bg-gray-300 rounded-full opacity-50"
+      :style="{
+        width: circle.size + 'px',
+        height: circle.size + 'px',
+        top: circle.top + '%',
+        left: circle.left + '%',
+      }"
+    ></div>
+
+    <!-- Garis melingkar kuning -->
+    <div
+      v-for="(ring, index) in rings"
+      :key="'ring-' + index"
+      class="absolute border-yellow-400 border-2 rounded-full opacity-40"
+      :style="{
+        width: ring.size + 'px',
+        height: ring.size + 'px',
+        top: ring.top + '%',
+        left: ring.left + '%',
+        transform: 'rotate(' + ring.rotate + 'deg)',
+      }"
+    ></div>
+  </div>
+</template>
